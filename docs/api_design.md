@@ -31,6 +31,9 @@
 - 初回ログイン時にアプリプロフィールを作成できる
 - `username` を取得できる
 - `username` を変更できる
+- 自分の `share_code` を取得・コピーできる
+- `share_code` はプロフィール初期設定時にバックエンドが自動生成する
+- `share_code` は作成後に変更できない
 - プロフィールの初期設定時にデフォルトフォルダを作成する
 
 2. 対応するエンドポイント
@@ -62,10 +65,12 @@
 - フォルダの中にメモを新規作成できる
 - フォルダを作成せずともメモを新規作成できる(元々一つの大きなフォルダがある)
 - メモを一覧できる
-- メモを閲覧できる(必要？)
+- メモを閲覧できる
 - メモを編集できる
 - メモを削除できる
   - ゴミ箱に移動する
+  - 移動前のフォルダ情報を破棄する
+  - 共有状態を解除する
 
 2. 対応するエンドポイント
 
@@ -82,18 +87,23 @@
 - 削除済みメモを閲覧できる
 - ゴミ箱からメモを復元
 - ゴミ箱からメモを削除
+- ゴミ箱内にある自分のメモを一括削除できる
+- 復元したメモはデフォルトフォルダに配置する
 
 2. 対応するエンドポイント
 
 - 一覧: GET /api/v1/trash/memos
 - 復元: POST /api/v1/memos/{memoId}/restore
 - 完全削除: DELETE /api/v1/trash/memos/{memoId}
+- 一括完全削除: DELETE /api/v1/trash/memos
 
 ## 共有機能
 
 1. 機能一覧
 
 - メモを共有できる
+- 1回のリクエストで共有できるメモは1つとする
+- 共有先は `shareCode` で指定し、共有先の `user_id` は送信しない
 - 共有した相手を一覧できる
 - 所有者が共有を解除できる
 - 共有されたメモを一覧できる
@@ -103,6 +113,26 @@
 
 - 共有する: POST /api/v1/memos/{memoId}/shares
 - 共有先一覧: GET /api/v1/memos/{memoId}/shares
-- 所有者による共有解除: DELETE /api/v1/memos/{memoId}/shares/{sharedWithUserId}
+- 所有者による共有解除: DELETE /api/v1/memos/{memoId}/shares/{shareCode}
 - 共有されたメモ一覧: GET /api/v1/shared-memos
 - 共有されたユーザーによる共有解除: DELETE /api/v1/shared-memos/{memoId}
+
+3. 共有作成時のリクエスト
+
+対象のメモIDはパスの `{memoId}` で指定し、リクエストボディには共有先の `shareCode` だけを指定する。
+
+```json
+{
+  "shareCode": "ABCDEFGHJKMN"
+}
+```
+
+バックエンドは `shareCode` を正規化し、`Profiles.share_code` から共有先の `user_id` を特定する。
+同じリクエストで複数のメモや複数の共有先を指定することはできない。
+
+4. 共有関連APIで公開する情報
+
+- 共有先一覧では、共有先の `username` と `shareCode` を返す
+- 共有されたメモ一覧では、`memoId`、メモの表示に必要な情報、所有者の `username` を返す
+- 他のユーザーの `user_id`、メールアドレス、認証情報は返さない
+- 所有者による共有解除では、一覧で取得した `shareCode` をパスに指定する
