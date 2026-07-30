@@ -1,0 +1,220 @@
+<mxGraphModel dx="1236" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="title" value="メモ帳管理アプリ 画面遷移図（Baseline）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="40" y="20" width="680" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-screen" value="画面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1050" y="25" width="90" height="32" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-modal" value="モーダル／確認" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFF4D6;strokeColor=#D59B24;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1150" y="25" width="130" height="32" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-decision" value="判定" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#8B5FBF;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1300" y="22" width="70" height="38" as="geometry" />
+    </mxCell>
+    <mxCell id="auth-zone" value="認証・初回設定" style="swimlane;html=1;startSize=32;horizontal=1;rounded=1;fillColor=#F8FAFC;swimlaneFillColor=#EEF2F7;strokeColor=#94A3B8;fontStyle=1;fontColor=#334155;" parent="1" vertex="1">
+      <mxGeometry x="40" y="85" width="1520" height="300" as="geometry" />
+    </mxCell>
+    <mxCell id="e-auth-yes" value="はい" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="auth-zone" edge="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="241.79" y="250.02" />
+          <mxPoint x="603.7900000000001" y="250.02" />
+        </Array>
+        <mxPoint x="241.26368421052624" y="180.00105263157891" as="sourcePoint" />
+        <mxPoint x="603.7900000000003" y="210.01999999999978" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="auth-check" value="ログイン済み？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#8B5FBF;fontColor=#1F2937;" parent="auth-zone" vertex="1">
+      <mxGeometry x="180" y="90" width="125" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="app-zone" value="認証後のメイン画面" style="swimlane;html=1;startSize=32;horizontal=1;rounded=1;fillColor=#F8FAFC;swimlaneFillColor=#EEF2F7;strokeColor=#94A3B8;fontStyle=1;fontColor=#334155;" parent="1" vertex="1">
+      <mxGeometry x="40" y="430" width="1010" height="720" as="geometry" />
+    </mxCell>
+    <mxCell id="modal-zone" value="モーダル・確認ダイアログ（操作元画面上に表示）" style="swimlane;html=1;startSize=32;horizontal=1;rounded=1;fillColor=#FFFCF5;swimlaneFillColor=#FFF5D9;strokeColor=#D6A540;fontStyle=1;fontColor=#5F4715;" parent="1" vertex="1">
+      <mxGeometry x="1080" y="410" width="480" height="720" as="geometry" />
+    </mxCell>
+    <mxCell id="start" value="アプリ起動" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#3A9B5F;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="75" y="195" width="110" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="login" value="ログイン" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="400" y="185" width="125" height="70" as="geometry" />
+    </mxCell>
+    <mxCell id="signup" value="ユーザー登録" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="585" y="105" width="130" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="email-guide" value="メール認証案内" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="770" y="105" width="140" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="profile-check" value="プロフィール&lt;br&gt;作成済み？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#8B5FBF;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="585" y="190" width="130" height="105" as="geometry" />
+    </mxCell>
+    <mxCell id="profile-setup" value="プロフィール初期設定&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;ユーザー名／共有コード・&lt;br&gt;デフォルトフォルダ生成&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="800" y="205" width="200" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="memo-list" value="メモ一覧&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;所有フォルダ／通常メモ&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDEBFF;strokeColor=#3567B7;strokeWidth=2;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="560" y="465" width="180" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="memo-edit" value="メモ編集&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;作成／閲覧／編集&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="560" y="650" width="180" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="shared-list" value="共有されたメモ一覧" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="75" y="635" width="180" height="70" as="geometry" />
+    </mxCell>
+    <mxCell id="shared-detail" value="共有メモ詳細&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;閲覧専用&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="75" y="815" width="180" height="75" as="geometry" />
+    </mxCell>
+    <mxCell id="trash" value="ゴミ箱&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;復元／完全削除&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="560" y="970" width="180" height="75" as="geometry" />
+    </mxCell>
+    <mxCell id="profile" value="プロフィール設定&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;ユーザー名／共有コード／ログアウト&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="820" y="635" width="190" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="login-after-logout" value="ログイン&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;ログアウト後に再表示&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#4F76C7;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
+      <mxGeometry x="825" y="820" width="180" height="70" as="geometry" />
+    </mxCell>
+    <mxCell id="folder-modals" value="フォルダ操作&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;作成／名前変更／削除確認&lt;br&gt;操作元：メモ一覧&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFF4D6;strokeColor=#D59B24;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1110" y="470" width="190" height="75" as="geometry" />
+    </mxCell>
+    <mxCell id="move-modal" value="メモ移動&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;移動先フォルダ選択&lt;br&gt;操作元：メモ一覧／メモ編集&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFF4D6;strokeColor=#D59B24;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1330" y="470" width="190" height="75" as="geometry" />
+    </mxCell>
+    <mxCell id="share-modal" value="メモ共有&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;share_code入力&lt;br&gt;操作元：メモ編集&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFF4D6;strokeColor=#D59B24;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1110" y="610" width="190" height="75" as="geometry" />
+    </mxCell>
+    <mxCell id="share-targets-modal" value="共有先一覧／共有解除確認&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;操作元：メモ編集&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFF4D6;strokeColor=#D59B24;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1330" y="610" width="190" height="75" as="geometry" />
+    </mxCell>
+    <mxCell id="trash-move-confirm" value="ゴミ箱移動確認&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;フォルダ情報・共有を破棄&lt;br&gt;操作元：メモ編集&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFE8D9;strokeColor=#D66A2C;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1110" y="750" width="190" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="shared-release-confirm" value="共有解除確認&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;共有先本人による解除&lt;br&gt;操作元：共有一覧／共有詳細&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFF4D6;strokeColor=#D59B24;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1330" y="750" width="190" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="delete-confirm" value="完全削除確認&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;1件を復元不可にする&lt;br&gt;操作元：ゴミ箱&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFE8D9;strokeColor=#D66A2C;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1110" y="900" width="190" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="bulk-delete-confirm" value="ゴミ箱一括削除確認&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;全件を復元不可にする&lt;br&gt;操作元：ゴミ箱&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFE8D9;strokeColor=#D66A2C;fontColor=#1F2937;" parent="1" vertex="1">
+      <mxGeometry x="1330" y="900" width="190" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="e-start-auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="start" target="auth-check" edge="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e-auth-no" value="いいえ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="auth-check" target="login" edge="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e-login-signup" value="登録へ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="login" target="signup" edge="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e-signup-email" value="登録受付" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="signup" target="email-guide" edge="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e-email-login" value="認証完了後" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="email-guide" target="login" edge="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="840" y="75" />
+          <mxPoint x="462" y="75" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-signup-login" value="ログインへ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#94A3B8;dashed=1;" parent="1" source="signup" target="login" edge="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e-login-profile-check" value="ログイン成功" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="login" target="profile-check" edge="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e-profile-no" value="いいえ：初回のみ設定" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#C27A1A;fontStyle=1;" parent="1" source="profile-check" target="profile-setup" edge="1">
+      <mxGeometry x="0.0863" y="-15" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="770" y="242" />
+          <mxPoint x="770" y="242" />
+        </Array>
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-profile-yes-list" value="はい：メモ一覧へ（再ログイン時）" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#2F855A;strokeWidth=2;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="profile-check" target="memo-list" edge="1">
+      <mxGeometry x="-0.2353" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="650" y="440" />
+          <mxPoint x="650" y="440" />
+        </Array>
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-setup-list" value="初期設定完了" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="profile-setup" target="memo-list">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="900" y="370" />
+          <mxPoint x="770" y="370" />
+          <mxPoint x="770" y="505" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-list-edit" value="作成／選択" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#3567B7;exitX=0.35;exitY=1;exitDx=0;exitDy=0;entryX=0.35;entryY=0;entryDx=0;entryDy=0;" parent="1" source="memo-list" target="memo-edit" edge="1">
+      <mxGeometry x="0.4286" y="-3" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-edit-list" value="戻る／ゴミ箱移動完了" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;exitX=0.65;exitY=0;exitDx=0;exitDy=0;entryX=0.65;entryY=1;entryDx=0;entryDy=0;" parent="1" source="memo-edit" target="memo-list" edge="1">
+      <mxGeometry x="0.5238" y="-3" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-list-shared" value="共有されたメモ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="memo-list" target="shared-list" edge="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e-shared-list-main" value="通常一覧へ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#94A3B8;dashed=1;" parent="1" source="shared-list" target="memo-list" edge="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="165" y="575" />
+          <mxPoint x="600" y="575" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-shared-detail" value="選択" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#3567B7;" parent="1" source="shared-list" target="shared-detail" edge="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e-detail-shared" value="戻る" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="shared-detail" target="shared-list" edge="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="275" y="853" />
+          <mxPoint x="275" y="670" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-list-trash" value="ゴミ箱" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="memo-list" target="trash" edge="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="510" y="505" />
+          <mxPoint x="510" y="1008" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-trash-list" value="通常一覧へ／復元完了" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#64748B;" parent="1" source="trash" target="memo-list" edge="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="780" y="1008" />
+          <mxPoint x="780" y="505" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-list-profile" value="プロフィール" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#64748B;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" parent="1" source="memo-list" target="profile" edge="1">
+      <mxGeometry x="0.2006" y="35" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-profile-list" value="設定を閉じる" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#64748B;exitX=0;exitY=0.65;exitDx=0;exitDy=0;entryX=1;entryY=0.65;entryDx=0;entryDy=0;" parent="1" source="profile" target="memo-list" edge="1">
+      <mxGeometry x="-0.0374" y="35" relative="1" as="geometry">
+        <mxPoint as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e-profile-logout" value="ログアウト" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#C2413B;exitX=0.65;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="profile" target="login-after-logout">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="profile-check-note" value="プロフィール作成済みの場合、ログアウト後に再ログインしても初期設定は表示しない。" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ECFDF3;strokeColor=#52A675;fontColor=#285B3D;size=15;fontSize=11;" parent="1" vertex="1">
+      <mxGeometry x="1030" y="205" width="300" height="80" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
